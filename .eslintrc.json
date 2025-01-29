@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended",
+    "prettier"
+  ],
+  "plugins": [
+    "no-barrel-files"
+  ],
+  "rules": {
+    "no-barrel-files/no-barrel-files": "error"
+  }
+}
