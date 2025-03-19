@@ -2,8 +2,6 @@
 
 Short description of the project
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F1msirius%2FNextfolio)
-
 ## Technologies Used
 
 - Framework: [Next.js](https://nextjs.org/)
