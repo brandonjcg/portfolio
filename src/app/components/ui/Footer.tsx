@@ -2,11 +2,13 @@ import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';
 
 export const Footer = () => {
+  const dateLastCommit = `Last commit: ${process.env.NEXT_PUBLIC_LAST_COMMIT ?? 'date not found'}`;
+
   return (
-    <footer className="w-full text-white p-4 flex flex-col items-center justify-center absolute bottom-0">
+    <footer className="w-full text-white p-8 flex flex-col items-center justify-center">
       <div className="flex gap-6 mb-4">
         <Link
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex gap-2 hover:underline hover:underline-offset-4"
           href="https://github.com/brandonjcg"
           target="_blank"
           rel="noopener noreferrer"
@@ -15,7 +17,7 @@ export const Footer = () => {
           Github
         </Link>
         <Link
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="flex gap-2 hover:underline hover:underline-offset-4"
           href="https://linkedin.com/in/brandonjcg"
           target="_blank"
           rel="noopener noreferrer"
@@ -24,9 +26,10 @@ export const Footer = () => {
           Linkedin
         </Link>
       </div>
-      <div className="flex flex-col items-center">
+      <>
         <span>Developed by Brandon Castillo 👨🏽‍💻</span>
-      </div>
+        <span>{dateLastCommit}</span>
+      </>
     </footer>
   );
 };

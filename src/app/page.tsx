@@ -1,19 +1,24 @@
-import { List } from './components/list/List';
-import { Footer } from './components/ui/Footer';
-import { Navbar } from './components/ui/Navbar';
+import { List } from './components/List/List';
+import { experiencesRows } from './data';
 
 export default function Home() {
-  return (
-    <div className="min-h-screen bg-black text-gray-300">
-      <div className="mx-auto max-w-2xl px-6">
-        <Navbar />
+  const beginDate = new Date('2019-07-24');
+  const endDate = new Date();
+  const years = endDate.getFullYear() - beginDate.getFullYear();
 
-        <h1 className="text-4xl text-center">🚧 Portfolio in progress 🚧</h1>
-        <div className="space-y-20 ">
-          <List />
-        </div>
+  return (
+    <>
+      <div className="space-y-10">
+        <section id="about" className="scroll-mt-16">
+          <h1 className="text-4xl text-center">{`I'm Brandon Castillo 👨🏽‍💻`}</h1>
+          <p className="mt-3 text-gray-400 leading-relaxed">
+            {`I'm a full-stack developer with ${years} years of experience in IT. I have been working with technologies like React, Node.js, NoSQL, and SQL databases. I have a strong background in database design, data analysis, and system optimization. I'm passionate about learning new technologies and building scalable and maintainable software.`}
+          </p>
+        </section>
+        <section id="projects" className="scroll-mt-16">
+          <List title="Experience" rows={experiencesRows} />
+        </section>
       </div>
-      <Footer />
-    </div>
+    </>
   );
 }
