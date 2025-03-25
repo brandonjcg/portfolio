@@ -4,3 +4,12 @@ export interface IList {
   period: string;
   description: string;
 }
+
+export interface IProject {
+  slug: string;
+  name: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  githubUrl?: string;
+}

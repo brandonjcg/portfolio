@@ -1,4 +1,4 @@
-import { type IList } from './interfaces';
+import { type IProject, type IList } from './interfaces';
 
 export const experiencesRows: IList[] = [
   {
@@ -21,5 +21,23 @@ export const experiencesRows: IList[] = [
     period: 'August 2018 – July 2019',
     description:
       'I developed a traceability system for TV series on physical pallets and purchase orders, significantly improving the efficiency of the logistics and shipping department. Additionally, I provided help-desk support to the plant, assisting with Active Directory, Office 365, Microsoft Dynamics ERP, and other internal systems, ensuring smooth operations and quick issue resolution.',
+  },
+];
+
+export const projectsRows: IProject[] = [
+  {
+    slug: 'poke-api',
+    name: 'Poke API',
+    description:
+      'List of Pokémon from the RESTful Pokémon API. You can also view the details of each Pokémon, such as its abilities, moves, and stats.',
+    image: '/poke-api.png?height=300&width=500',
+    technologies: [
+      'React',
+      'React Router',
+      'Redux Toolkit',
+      'Vite',
+      'TypeScript',
+    ],
+    githubUrl: 'https://github.com/brandonjcg/pokeapi',
   },
 ];
