@@ -39,5 +39,6 @@ export const projectsRows: IProject[] = [
       'TypeScript',
     ],
     githubUrl: 'https://github.com/brandonjcg/pokeapi',
+    websiteUrl: 'https://pokeapi-brandonjcg.vercel.app',
   },
 ];

@@ -1,8 +1,6 @@
 import Image from 'next/image';
 import { type IProject } from '@/app/interfaces';
 import { ListProjectsItemLinks } from './ListProjectsItemLinks';
-import Link from 'next/link';
-import { BsGithub } from 'react-icons/bs';
 
 interface Props {
   project: IProject;
@@ -36,14 +34,7 @@ export const ListProjectsItem = ({ project }: Props) => {
           ))}
         </div>
 
-        {project.githubUrl && (
-          <Link
-            href={project.githubUrl}
-            className="inline-block text-gray-400 hover:text-white transition-colors"
-          >
-            <BsGithub size={24} />
-          </Link>
-        )}
+        <ListProjectsItemLinks project={project} />
       </div>
     </>
   );

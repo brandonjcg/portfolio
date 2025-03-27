@@ -12,4 +12,5 @@ export interface IProject {
   image: string;
   technologies: string[];
   githubUrl?: string;
+  websiteUrl?: string;
 }
