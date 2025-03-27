@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import { type IProject } from '@/app/interfaces';
+import { ListProjectsItemLinks } from './ListProjectsItemLinks';
 import Link from 'next/link';
 import { BsGithub } from 'react-icons/bs';
-import { type IProject } from '@/app/interfaces';
 
 interface Props {
   project: IProject;
