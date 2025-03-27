@@ -30,7 +30,7 @@ export const projectsRows: IProject[] = [
     name: 'Poke API',
     description:
       'List of Pokémon from the RESTful Pokémon API. You can also view the details of each Pokémon, such as its abilities, moves, and stats.',
-    images: ['/poke-api-1.png', '/poke-api-2.png'],
+    images: ['/poke-api-1.webp', '/poke-api-2.webp'],
     technologies: [
       'React',
       'React Router',
