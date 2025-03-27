@@ -9,7 +9,8 @@ export interface IProject {
   slug: string;
   name: string;
   description: string;
-  image: string;
+  images: string[];
   technologies: string[];
   githubUrl?: string;
+  websiteUrl?: string;
 }

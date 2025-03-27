@@ -1,7 +1,6 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import { BsGithub } from 'react-icons/bs';
 import { type IProject } from '@/app/interfaces';
+import { ListProjectsItemLinks } from './ListProjectsItemLinks';
+import { ListProjectsItemImage } from './ListProjectsItemImage';
 
 interface Props {
   project: IProject;
@@ -11,13 +10,16 @@ export const ListProjectsItem = ({ project }: Props) => {
   return (
     <>
       <div key={project.slug} className="flex flex-col">
-        <div className="bg-gray-800 rounded-lg overflow-hidden mb-4">
-          <Image
-            src={project.image || '/placeholder.svg'}
+        <div className="group bg-gray-800 rounded-lg overflow-hidden mb-4 relative">
+          <ListProjectsItemImage
+            src={project.images[0]}
             alt={project.name}
-            width={500}
-            height={300}
-            className="w-full h-auto object-cover"
+            className="w-full h-auto object-cover transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <ListProjectsItemImage
+            src={project.images[1]}
+            alt={project.name}
+            className="w-full h-auto object-cover absolute top-0 left-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100"
           />
         </div>
 
@@ -27,7 +29,7 @@ export const ListProjectsItem = ({ project }: Props) => {
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech) => (
             <span
-              key={tech.toLocaleLowerCase()}
+              key={tech.toLowerCase()}
               className="bg-gray-800 text-sm px-3 py-1 rounded-full"
             >
               {tech}
@@ -35,14 +37,7 @@ export const ListProjectsItem = ({ project }: Props) => {
           ))}
         </div>
 
-        {project.githubUrl && (
-          <Link
-            href={project.githubUrl}
-            className="inline-block text-gray-400 hover:text-white transition-colors"
-          >
-            <BsGithub size={24} />
-          </Link>
-        )}
+        <ListProjectsItemLinks project={project} />
       </div>
     </>
   );

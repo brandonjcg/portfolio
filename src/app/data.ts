@@ -30,7 +30,7 @@ export const projectsRows: IProject[] = [
     name: 'Poke API',
     description:
       'List of Pokémon from the RESTful Pokémon API. You can also view the details of each Pokémon, such as its abilities, moves, and stats.',
-    image: '/poke-api.png?height=300&width=500',
+    images: ['/poke-api-1.png', '/poke-api-2.png'],
     technologies: [
       'React',
       'React Router',
@@ -39,5 +39,6 @@ export const projectsRows: IProject[] = [
       'TypeScript',
     ],
     githubUrl: 'https://github.com/brandonjcg/pokeapi',
+    websiteUrl: 'https://pokeapi-brandonjcg.vercel.app',
   },
 ];

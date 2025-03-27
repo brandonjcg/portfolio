@@ -1,5 +1,5 @@
 import { List } from './components/List/List';
-import { ListProjects } from './components/List/ListProjects';
+import { ListProjects } from './components/ListProjects/ListProjects';
 import { experiencesRows, projectsRows } from './data';
 
 export default function Home() {
