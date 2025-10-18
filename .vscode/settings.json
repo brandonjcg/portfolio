@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "app",
         "dev 👨🏽‍💻",
-        "components"
+        "components",
+        "projects"
     ]
 }

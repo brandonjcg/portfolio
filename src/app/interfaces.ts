@@ -11,6 +11,6 @@ export interface IProject {
   description: string;
   images: string[];
   technologies: string[];
-  githubUrl?: string;
+  githubUrl: string | null;
   websiteUrl?: string;
 }
