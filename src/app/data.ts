@@ -26,6 +26,22 @@ export const experiencesRows: IList[] = [
 
 export const projectsRows: IProject[] = [
   {
+    slug: 'breaking-bad-api',
+    name: 'Breaking Bad API',
+    description:
+      'List of characters from the Breaking Bad universe. You can also view the details of each character, such as their quotes, episodes, and more.',
+    images: ['/bb-1.webp', '/bb-2.webp'],
+    technologies: [
+      'Next',
+      'Next Auth',
+      'Tanstack Query',
+      'Zustand',
+      'TypeScript',
+    ],
+    githubUrl: null,
+    websiteUrl: 'https://bc-bb.vercel.app',
+  },
+  {
     slug: 'poke-api',
     name: 'Poke API',
     description:
